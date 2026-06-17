@@ -1,0 +1,34 @@
+name: team09/lebenslauf
+typeName: team09_lebenslauf
+group: default
+prefixFields: true
+prefixType: full
+fields:
+  -
+    identifier: header
+    useExistingField: true
+    label: Ueberschrift
+
+  -
+    identifier: person_tab
+    type: Tab
+    label: Person
+
+  -
+    identifier: nachname
+    type: Text
+    label: Name
+    required: true
+
+  -
+    identifier: vorname
+    type: Text
+    label: Vorname
+    required: true
+ 
+  -
+    identifier: test_tab
+    type: Tab
+    label: Test
+     
+

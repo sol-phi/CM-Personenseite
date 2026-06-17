@@ -1,0 +1,5 @@
+settings:
+  plugin.tx_powermail.settings.BasicCss:
+    default: 'EXT:powermail/Resources/Public/Css/Basic.css'
+    type: text
+    category: powermail.styling

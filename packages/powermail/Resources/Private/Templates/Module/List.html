@@ -1,0 +1,33 @@
+<html
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+
+<f:layout name="Module" />
+
+<f:section name="Content">
+
+	<f:render partial="Module/JsAndCssImport" arguments="{_all}" />
+
+	<h1><f:translate key="BackendListTitle" /></h1>
+
+	<f:alias map="{forwardToAction: 'list'}">
+		<f:render partial="Module/Filter" arguments="{_all}" />
+	</f:alias>
+
+	<div class="powermail_list">
+		<f:if condition="{mails}">
+			<f:then>
+				<f:render partial="Module/List" arguments="{_all}" />
+				<f:render partial="Module/SelectedLineMessage" arguments="{_all}" />
+				<f:render partial="Module/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, piVars: piVars}" />
+			</f:then>
+			<f:else>
+				<h3><f:translate key="BackendListNoMails" /></h3>
+				<p><f:translate key="BackendListNoMailsSub" /></p>
+			</f:else>
+		</f:if>
+	</div>
+
+</f:section>
+
+</html>

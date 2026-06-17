@@ -1,0 +1,12 @@
+page.logo.file: fileadmin/user_upload/cm-logo.svg
+page.logo.fileInverted: fileadmin/user_upload/cm-logo.svg
+plugin.bootstrap_package.settings.scss.primary: '#4E4187'
+plugin.bootstrap_package.settings.scss.secondary: '#FFBC42'
+plugin.bootstrap_package.settings.scss.tertiary: '#90baad'
+plugin.bootstrap_package.settings.scss.quaternary: '#EFE9F4'
+plugin.bootstrap_package.settings.scss.default: '#4E4187'
+page.theme.googleFont.font: 'Space Mono'
+plugin.bootstrap_package.settings.scss.font-family-sans-serif: '"Space Mono", monospace'
+plugin.bootstrap_package.settings.scss.font-family-monospace: '"Space Mono", monospace'
+plugin.bootstrap_package.settings.scss.body-bg: $quaternary
+plugin.tx_powermail.settings.styles.framework.fieldAndLabelWrappingClasses: 'col-md-6 mt-3'

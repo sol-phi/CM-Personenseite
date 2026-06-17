@@ -1,0 +1,4 @@
+name: universitaet-trier/personenseite
+label: 'Personenseite'
+dependencies:
+  - bootstrap-package/full

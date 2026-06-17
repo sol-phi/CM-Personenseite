@@ -1,0 +1,26 @@
+base: /
+dependencies:
+  - universitaet-trier/personenseite
+  - bootstrap-package/content-elements
+  - bootstrap-package/backend-layouts
+  - bootstrap-package/rte
+  - bootstrap-package/full
+  - in2code/powermail-dropin-main
+  - in2code/powermail-dropin-marketing
+  - in2code/powermail-main
+  - in2code/powermail-marketing
+  - tpwd/ke_search
+  - nitsan/ns-openstreetmap
+languages:
+  -
+    title: English
+    enabled: true
+    locale: en_US.UTF-8
+    hreflang: ''
+    base: /
+    websiteTitle: ''
+    navigationTitle: English
+    flag: us
+    languageId: 0
+rootPageId: 2
+websiteTitle: Home

@@ -1,0 +1,21 @@
+page {
+    includeCSS {
+        theme = EXT:personenseite/Resources/Public/Scss/Theme/theme.scss
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        personenseite_scripts = EXT:personenseite/Resources/Public/JavaScript/main.js
+    }
+}

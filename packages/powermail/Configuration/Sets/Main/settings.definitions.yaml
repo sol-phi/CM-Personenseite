@@ -1,0 +1,434 @@
+categories:
+  powermail:
+  powermail.captcha:
+    parent: powermail
+  powermail.mail-receiver:
+    parent: powermail
+  powermail.mail-receiver.common:
+    parent: powermail.mail-receiver
+  powermail.mail-receiver.overwrite:
+    parent: powermail.mail-receiver
+  powermail.mail-receiver.senderheader:
+    parent: powermail.mail-receiver
+  powermail.mail-sender:
+    parent: powermail
+  powermail.mail-sender.common:
+    parent: powermail.mail-sender
+  powermail.mail-sender.overwrite:
+    parent: powermail.mail-sender
+  powermail.mail-sender.senderheader:
+    parent: powermail.mail-sender
+  powermail.marketing:
+    parent: powermail
+  powermail.misc:
+    parent: powermail
+  powermail.spamshield:
+    parent: powermail
+  powermail.db:
+    parent: powermail
+  powermail.styling:
+    parent: powermail
+  powermail.validation:
+    parent: powermail
+  powermail.view:
+    parent: powermail
+
+settings:
+  plugin.tx_powermail.settings.captcha.image:
+    default: 'EXT:powermail/Resources/Private/Image/captcha_bg.png'
+    type: text
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.font:
+    default: 'EXT:powermail/Resources/Private/Fonts/Segment16cBold.ttf'
+    type: text
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.textColor:
+    default: '#111111'
+    type: text
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.textSize:
+    default: 32
+    type: int
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.textAngle:
+    default: '-5,5'
+    type: text
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.distanceHor:
+    default: '20,100'
+    type: text
+    category: powermail.captcha
+  plugin.tx_powermail.settings.captcha.distanceVer:
+    default: '30,45'
+    type: text
+    category: powermail.captcha
+
+  plugin.tx_powermail.settings.db.enable:
+    default: 1
+    type: int
+    category: powermail.db
+  plugin.tx_powermail.settings.db.hidden:
+    default: 0
+    type: int
+    category: powermail.db
+
+  plugin.tx_powermail.settings.main.pid:
+    category: powermail
+    default: ''
+    type: string
+  plugin.tx_powermail.settings.main.form:
+    category: powermail
+    default: ''
+    type: string
+  plugin.tx_powermail.settings.main.confirmation:
+    category: powermail
+    default: false
+    type: bool
+  plugin.tx_powermail.settings.main.optin:
+    category: powermail
+    default: false
+    type: bool
+  plugin.tx_powermail.settings.main.moresteps:
+    category: powermail
+    default: 0
+    type: int
+
+  plugin.tx_powermail.settings.misc.htmlForHtmlFields:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.htmlForLabels:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.showOnlyFilledValues:
+    default: true
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.ajaxSubmit:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.addQueryString:
+    default: '0'
+    type: string
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.uploadFolder:
+    default: 'uploads/tx_powermail/'
+    type: text
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.uploadSize:
+    default: 10485760
+    type: int
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.uploadFileExtensions:
+    default: 'jpg,jpeg,gif,png,tif,txt,doc,docx,xls,xlsx,ppt,pptx,pdf,mpg,mpeg,avi,mp3,zip,rar,ace,csv,svg'
+    type: text
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.randomizeFileName:
+    default: true
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.randomizePrependOriginalFileName:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.debugSettings:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.debugVariables:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.debugMail:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.debugSaveToTable:
+    default: false
+    type: bool
+    category: powermail.misc
+  plugin.tx_powermail.settings.misc.debugSpamshield:
+    default: false
+    type: bool
+    category: powermail.misc
+
+  plugin.tx_powermail.settings.receiver.enable:
+    category: powermail.mail-receiver.common
+    default: true
+    type: bool
+  plugin.tx_powermail.settings.receiver.attachment:
+    category: powermail.mail-receiver.common
+    default: true
+    type: bool
+  plugin.tx_powermail.settings.receiver.mailformat:
+    category: powermail.mail-receiver.common
+    default: 'both'
+    type: string
+    enum:
+      both: 'HTML and Plain text e-mails'
+      html: 'HTML e-mails only'
+      plain: 'Plain text e-mails only'
+  plugin.tx_powermail.settings.receiver.default.senderName:
+    category: powermail.mail-receiver.common
+    type: text
+    default: ''
+  plugin.tx_powermail.settings.receiver.default.senderEmail:
+    category: powermail.mail-receiver.common
+    type: text
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.email:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.name:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.senderName:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.senderEmail:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.subject:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.cc:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.bcc:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.returnPath:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.replyToEmail:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.replyToName:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.overwrite.priority:
+    category: powermail.mail-receiver.overwrite
+    type: string
+    default: '3'
+    enum:
+      1: Priority 1
+      2: Priority 2
+      3: Priority 3
+      4: Priority 4
+      5: Priority 5
+  plugin.tx_powermail.settings.receiver.senderHeader.email:
+    category: powermail.mail-receiver.senderheader
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.receiver.senderHeader.name:
+    category: powermail.mail-receiver.senderheader
+    type: string
+    default: ''
+
+
+  plugin.tx_powermail.settings.sender.enable:
+    category: powermail.mail-sender.common
+    default: true
+    type: bool
+  plugin.tx_powermail.settings.sender.attachment:
+    category: powermail.mail-sender.common
+    default: false
+    type: bool
+  plugin.tx_powermail.settings.sender.mailformat:
+    category: powermail.mail-sender.common
+    default: 'both'
+    type: string
+    enum:
+      both: 'HTML and Plain text e-mails'
+      html: 'HTML e-mails only'
+      plain: 'Plain text e-mails only'
+  plugin.tx_powermail.settings.sender.addDisclaimerLink:
+    category: powermail.mail-sender.common
+    default: true
+    type: bool
+  plugin.tx_powermail.settings.sender.default.senderName:
+    category: powermail.mail-sender.common
+    type: text
+    default: ''
+  plugin.tx_powermail.settings.sender.default.senderEmail:
+    category: powermail.mail-sender.common
+    type: text
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.email:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.name:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.senderName:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.senderEmail:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.subject:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.cc:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.bcc:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.returnPath:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.replyToEmail:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.replyToName:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.overwrite.priority:
+    category: powermail.mail-sender.overwrite
+    type: string
+    default: '3'
+    enum:
+      1: Priority 1
+      2: Priority 2
+      3: Priority 3
+      4: Priority 4
+      5: Priority 5
+  plugin.tx_powermail.settings.sender.senderHeader.email:
+    category: powermail.mail-sender.senderheader
+    type: string
+    default: ''
+  plugin.tx_powermail.settings.sender.senderHeader.name:
+    category: powermail.mail-sender.senderheader
+    type: string
+    default: ''
+
+  plugin.tx_powermail.settings.spamshield.enable:
+    default: true
+    type: bool
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.factor:
+    default: 75
+    type: int
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.email:
+    default: ''
+    type: string
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.senderEmail:
+    default: ''
+    type: string
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.emailSubject:
+    default: 'Spam in powermail form recognized'
+    type: string
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.emailTemplate:
+    default: 'EXT:powermail/Resources/Private/Templates/Mail/SpamNotification.html'
+    type: string
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.logfileLocation:
+    default: ''
+    type: string
+    category: powermail.spamshield
+  plugin.tx_powermail.settings.spamshield.logTemplate:
+    default: 'EXT:powermail/Resources/Private/Templates/Log/SpamNotification.html'
+    type: string
+    category: powermail.spamshield
+
+  plugin.tx_powermail.settings.validation.native:
+    category: powermail.validation
+    type: bool
+    default: true
+  plugin.tx_powermail.settings.validation.client:
+    category: powermail.validation
+    type: bool
+    default: true
+  plugin.tx_powermail.settings.validation.server:
+    category: powermail.validation
+    type: bool
+    default: true
+
+  plugin.tx_powermail.settings.styles.framework.numberOfColumns:
+    default: 2
+    type: int
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.rowClasses:
+    default: 'row'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.formClasses:
+    default: ''
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.fieldAndLabelWrappingClasses:
+    default: 'col-md-6'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.fieldWrappingClasses:
+    default: 'powermail_field'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.labelClasses:
+    default: 'form-label powermail_label'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.fieldClasses:
+    default: 'form-control'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.offsetClasses:
+    default: ''
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.radioClasses:
+    default: 'form-check powermail_radiowrap'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.checkClasses:
+    default: 'form-check powermail_checkwrap'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.submitClasses:
+    default: 'btn btn-primary'
+    type: text
+    category: powermail.styling
+  plugin.tx_powermail.settings.styles.framework.createClasses:
+    default: 'powermail_create'
+    type: text
+    category: powermail.styling
+
+  plugin.tx_powermail.view.templateRootPath:
+    category: powermail.view
+    type: string
+    default: 'EXT:powermail/Resources/Private/Templates/'
+  plugin.tx_powermail.view.partialRootPath:
+    category: powermail.view
+    type: string
+    default: 'EXT:powermail/Resources/Private/Partials/'
+  plugin.tx_powermail.view.layoutRootPath:
+    category: powermail.view
+    type: string
+    default: 'EXT:powermail/Resources/Private/Layouts/'

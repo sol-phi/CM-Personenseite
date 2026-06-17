@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-06-17T10:49:53+00:00" product-name="team09/lebenslauf">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>lebenslauf</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Description for Content Element team09/lebenslauf</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

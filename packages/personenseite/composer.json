@@ -1,0 +1,32 @@
+{
+    "name": "universitaet-trier/personenseite",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://team09.wi1cm.uni-trier.de/public/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Joscha Pracht, Philip Solheid",
+            "email": "s4joprac@uni-trier.de",
+            "homepage": "https://team09.wi1cm.uni-trier.de/public/"
+        }
+    ],
+    "require": {
+        "bk2k/bootstrap-package": "^16.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UniversitaetTrier\\Personenseite\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "personenseite",
+            "Package": {
+                "providesPackages": {}
+            }
+        }
+    }
+}

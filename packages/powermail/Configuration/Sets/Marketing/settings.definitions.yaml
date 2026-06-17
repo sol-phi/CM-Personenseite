@@ -1,0 +1,21 @@
+settings:
+  plugin.tx_powermail.settings.marketing.enable:
+    default: 0
+    type: int
+    category: powermail.marketing
+  plugin.tx_powermail.settings.marketing.googleAdwords._enable:
+    default: 0
+    type: int
+    category: powermail.marketing
+  plugin.tx_powermail.settings.marketing.googleAdwords.google_conversion_id:
+    default: 1234567890
+    type: int
+    category: powermail.marketing
+  plugin.tx_powermail.settings.marketing.googleAdwords.google_conversion_label:
+    default: 'abcdefghijklmnopqrs'
+    type: text
+    category: powermail.marketing
+  plugin.tx_powermail.settings.marketing.googleAdwords.google_conversion_language:
+    default: 'en'
+    type: text
+    category: powermail.marketing

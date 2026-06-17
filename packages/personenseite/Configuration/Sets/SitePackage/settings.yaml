@@ -1,0 +1,21 @@
+plugin.bootstrap_package.settings.scss.primary: '#eb3e4a'
+plugin.bootstrap_package.settings.scss.secondary: '#013859'
+plugin.bootstrap_package.view.layoutRootPath: 'EXT:personenseite/Resources/Private/Layouts/'
+plugin.bootstrap_package.view.partialRootPath: 'EXT:personenseite/Resources/Private/Partials/'
+plugin.bootstrap_package.view.templateRootPath: 'EXT:personenseite/Resources/Private/Templates/'
+
+plugin.bootstrap_package_contentelements.view.layoutRootPath: 'EXT:personenseite/Resources/Private/Layouts/ContentElements/'
+plugin.bootstrap_package_contentelements.view.partialRootPath: 'EXT:personenseite/Resources/Private/Partials/ContentElements/'
+plugin.bootstrap_package_contentelements.view.templateRootPath: 'EXT:personenseite/Resources/Private/Templates/ContentElements/'
+
+page.logo.file: 'EXT:personenseite/Resources/Public/Images/logo.svg'
+page.logo.fileInverted: 'EXT:personenseite/Resources/Public/Images/logo-inverted.svg'
+page.logo.width: 192
+page.logo.alt: 'My Site Package'
+page.logo.linktitle: 'My Site Package'
+
+page.favicon.file: 'EXT:personenseite/Resources/Public/Icons/favicon.ico'
+
+page.fluidtemplate.layoutRootPath: 'EXT:personenseite/Resources/Private/Layouts/Page/'
+page.fluidtemplate.partialRootPath: 'EXT:personenseite/Resources/Private/Partials/Page/'
+page.fluidtemplate.templateRootPath: 'EXT:personenseite/Resources/Private/Templates/Page/'
