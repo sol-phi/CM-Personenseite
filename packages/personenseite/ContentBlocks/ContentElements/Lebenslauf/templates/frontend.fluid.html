@@ -1,9 +1,51 @@
-<html
-    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
-    data-namespace-typo3-fluid="true"
->
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 
-Frontend template for Content Block: team09/lebenslauf<br>
-{data.header}
+<div class="lebenslauf-container py-5">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="mb-5 border-bottom border-primary pb-3">
+                <h1 class="display-4 fw-bold text-primary">{data.vorname} {data.nachname}</h1>
+
+                <div class="text-muted mt-2">
+                    <f:if condition="{data.strasse} || {data.plz} || {data.ort}">
+                        <div>
+                            {data.strasse}, {data.plz} {data.ort}
+                        </div>
+                    </f:if>
+
+                    <f:if condition="{data.geburtsdatum}">
+                        Geburtsdatum: {data.geburtsdatum}
+                    </f:if>
+                </div>
+            </div>
+
+            <f:for each="{data.stationen}" as="station">
+                <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 text-muted">
+                                <small class="text-uppercase fw-bold">
+                                    {station.startdate}
+                                    <f:if condition="{station.enddate}">– {station.enddate}</f:if>
+                                    <f:if condition="!{station.enddate}">– Heute</f:if>
+                                </small>
+                            </div>
+                            <div class="col-md-9">
+                                <h5 class="card-title fw-bold text-dark mb-2">{station.title}</h5>
+                                <h6 class="card-subtitle mb-1 text-primary">{station.company}</h6>
+                                <p class="card-text text-primary">
+                                    <f:format.nl2br>{station.description}</f:format.nl2br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+
+        </div>
+    </div>
+</div>
+
 </html>

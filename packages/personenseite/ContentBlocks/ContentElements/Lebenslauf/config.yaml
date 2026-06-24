@@ -7,28 +7,67 @@ fields:
   -
     identifier: header
     useExistingField: true
-    label: Ueberschrift
+    label: "header.label"
 
   -
-    identifier: person_tab
+    identifier: person
     type: Tab
-    label: Person
+    label: "tabs.person"
+
+  - identifier: vorname
+    type: Text
+    label: "vorname.label"
+    required: true
 
   -
     identifier: nachname
     type: Text
-    label: Name
+    label: "nachname.label"
     required: true
 
   -
-    identifier: vorname
+    identifier: strasse
     type: Text
-    label: Vorname
-    required: true
- 
-  -
-    identifier: test_tab
-    type: Tab
-    label: Test
-     
+    label: "strasse.label"
 
+  - identifier: plz
+    type: Text
+    label: "plz.label"
+
+  - identifier: ort
+    type: Text
+    label: "ort.label"
+
+  - identifier: geburtsdatum
+    type: Text
+    label: "geburtsdatum.label"
+
+  - identifier: lebenslauf
+    type: Tab
+    label: "tabs.lebenslauf"
+
+  - identifier: stationen
+    type: Collection
+    label: "stationen.label"
+    labelField: title
+    appearance.useSortable: true
+    appearance.collapseAll: true
+    fields:
+      - identifier: startdate
+        type: Text
+        label: "startdate.label"
+        required: true
+      - identifier: enddate
+        type: Text
+        label: "enddate.label"
+      - identifier: title
+        type: Text
+        label: "title.label"
+        required: true
+      - identifier: company
+        type: Text
+        label: "company.label"
+        required: true
+      - identifier: description
+        type: Textarea
+        label: "description.label"
