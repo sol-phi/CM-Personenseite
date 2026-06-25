@@ -12,62 +12,108 @@ fields:
   -
     identifier: person
     type: Tab
-    label: "tabs.person"
+    label: "Persönliche Daten"
 
   - identifier: vorname
     type: Text
-    label: "vorname.label"
+    label: "Vorname"
     required: true
 
   -
     identifier: nachname
     type: Text
-    label: "nachname.label"
+    label: "Nachname"
     required: true
 
   -
     identifier: strasse
     type: Text
-    label: "strasse.label"
+    label: "Straße"
 
   - identifier: plz
     type: Text
-    label: "plz.label"
+    label: "PLZ"
 
   - identifier: ort
     type: Text
-    label: "ort.label"
+    label: "Ort"
 
   - identifier: geburtsdatum
     type: Text
-    label: "geburtsdatum.label"
+    label: "Geburtsdatum"
 
-  - identifier: lebenslauf
+  - identifier: erfahrungen_tab
     type: Tab
-    label: "tabs.lebenslauf"
+    label: "Praktische Erfahrungen"
 
-  - identifier: stationen
+  - identifier: erfahrungen
     type: Collection
-    label: "stationen.label"
+    label: "Erfahrungseinträge"
     labelField: title
     appearance.useSortable: true
     appearance.collapseAll: true
     fields:
       - identifier: startdate
         type: Text
-        label: "startdate.label"
+        label: "Startzeitpunkt (z.B. MM/JJJJ)"
         required: true
       - identifier: enddate
         type: Text
-        label: "enddate.label"
+        label: "Endzeitpunkt (leer lassen für 'Heute')"
       - identifier: title
         type: Text
-        label: "title.label"
+        label: "Position / Jobbezeichnung"
         required: true
       - identifier: company
         type: Text
-        label: "company.label"
+        label: "Unternehmen / Organisation"
         required: true
       - identifier: description
         type: Textarea
-        label: "description.label"
+        label: "Beschreibung der Tätigkeiten"
+
+  - identifier: bildung_tab
+    type: Tab
+    label: "Schulbildung / Studium"
+
+  - identifier: bildung
+    type: Collection
+    label: "Bildungseinträge"
+    labelField: title
+    appearance.useSortable: true
+    appearance.collapseAll: true
+    fields:
+      - identifier: startdate
+        type: Text
+        label: "Startzeitpunkt"
+        required: true
+      - identifier: enddate
+        type: Text
+        label: "Endzeitpunkt"
+      - identifier: title
+        type: Text
+        label: "Abschluss / Studiengang"
+        required: true
+      - identifier: institution
+        type: Text
+        label: "Schule / Universität"
+        required: true
+
+  - identifier: kenntnisse_tab
+    type: Tab
+    label: "Besondere Kenntnisse"
+
+  - identifier: kenntnisse
+    type: Collection
+    label: "Kenntnisse"
+    labelField: skill
+    appearance.useSortable: true
+    appearance.collapseAll: true
+    fields:
+      - identifier: skill
+        type: Text
+        label: "Fähigkeit (z.B. TYPO3, Englisch)"
+        required: true
+      - identifier: level
+        type: Text
+        label: "Niveau (z.B. Fortgeschritten, Muttersprache)"
