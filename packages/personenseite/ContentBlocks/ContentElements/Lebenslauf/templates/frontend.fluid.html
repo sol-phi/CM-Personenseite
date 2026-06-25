@@ -1,48 +1,92 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true" lang="en">
 
-<div class="lebenslauf-container py-5">
+<div class="lebenslauf-container py-5" itemscope itemtype="https://schema.org/Person">
 
     <div class="row justify-content-center">
         <div class="col-md-8">
 
             <div class="mb-5 border-bottom border-primary pb-3">
-                <h1 class="display-4 fw-bold text-primary">{data.vorname} {data.nachname}</h1>
+                <h1 class="display-4 fw-bold text-primary" itemprop="name">{data.vorname} {data.nachname}</h1>
 
                 <div class="text-muted mt-2">
                     <f:if condition="{data.strasse} || {data.plz} || {data.ort}">
-                        <div>
-                            {data.strasse}, {data.plz} {data.ort}
+                        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <span itemprop="streetAddress">{data.strasse}</span>,
+                            <span itemprop="postalCode">{data.plz}</span>
+                            <span itemprop="addressLocality">{data.ort}</span>
                         </div>
                     </f:if>
 
                     <f:if condition="{data.geburtsdatum}">
-                        Geburtsdatum: {data.geburtsdatum}
+                        <div class="mt-1">Geburtsdatum: <span itemprop="birthDate">{data.geburtsdatum}</span></div>
                     </f:if>
                 </div>
             </div>
 
-            <f:for each="{data.stationen}" as="station">
-                <div class="card mb-3 border-0 shadow-sm">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3 text-muted">
-                                <small class="text-uppercase fw-bold">
-                                    {station.startdate}
-                                    <f:if condition="{station.enddate}">– {station.enddate}</f:if>
-                                    <f:if condition="!{station.enddate}">– Heute</f:if>
-                                </small>
-                            </div>
-                            <div class="col-md-9">
-                                <h5 class="card-title fw-bold text-dark mb-2">{station.title}</h5>
-                                <h6 class="card-subtitle mb-1 text-primary">{station.company}</h6>
-                                <p class="card-text text-primary">
-                                    <f:format.nl2br>{station.description}</f:format.nl2br>
-                                </p>
+            <f:if condition="{data.erfahrungen}">
+                <h3 class="mb-4 text-secondary">Praktische Erfahrungen</h3>
+                <f:for each="{data.erfahrungen}" as="job">
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 text-muted">
+                                    <small class="text-uppercase fw-bold">
+                                        {job.startdate}
+                                        <f:if condition="{job.enddate}">– {job.enddate}</f:if>
+                                        <f:if condition="!{job.enddate}">– Heute</f:if>
+                                    </small>
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="card-title fw-bold text-dark mb-2" itemprop="jobTitle">{job.title}</h5>
+                                    <h6 class="card-subtitle mb-1 text-primary" itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                                        <span itemprop="name">{job.company}</span>
+                                    </h6>
+                                    <f:if condition="{job.description}">
+                                        <p class="card-text text-muted mt-2">
+                                            <f:format.nl2br>{job.description}</f:format.nl2br>
+                                        </p>
+                                    </f:if>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </f:for>
+                </f:for>
+            </f:if>
+
+            <f:if condition="{data.bildung}">
+                <h3 class="mb-4 mt-5 text-secondary">Schulbildung & Studium</h3>
+                <f:for each="{data.bildung}" as="schule">
+                    <div class="card mb-3 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3 text-muted">
+                                    <small class="text-uppercase fw-bold">
+                                        {schule.startdate} <f:if condition="{schule.enddate}">– {schule.enddate}</f:if>
+                                    </small>
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="card-title fw-bold text-dark mb-2">{schule.title}</h5>
+                                    <h6 class="card-subtitle mb-1 text-primary" itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                                        <span itemprop="name">{schule.institution}</span>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:if>
+
+            <f:if condition="{data.kenntnisse}">
+                <h3 class="mb-4 mt-5 text-secondary">Besondere Kenntnisse</h3>
+                <ul class="list-group list-group-flush shadow-sm rounded">
+                    <f:for each="{data.kenntnisse}" as="item">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>{item.skill}</span>
+                            <span class="badge bg-primary rounded-pill">{item.level}</span>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:if>
 
         </div>
     </div>
