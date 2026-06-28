@@ -61,7 +61,9 @@
                             <div class="row">
                                 <div class="col-md-3 text-muted">
                                     <small class="text-uppercase fw-bold">
-                                        {schule.startdate} <f:if condition="{schule.enddate}">– {schule.enddate}</f:if>
+                                        {schule.startdate}
+                                        <f:if condition="{schule.enddate}">– {schule.enddate}</f:if>
+                                        <f:if condition="!{schule.enddate}">– Heute</f:if>
                                     </small>
                                 </div>
                                 <div class="col-md-9">
