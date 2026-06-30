@@ -85,11 +85,11 @@ fields:
     fields:
       - identifier: startdate
         type: Text
-        label: "Startzeitpunkt"
+        label: "Startzeitpunkt (z.B. MM/JJJJ)"
         required: true
       - identifier: enddate
         type: Text
-        label: "Endzeitpunkt"
+        label: "Endzeitpunkt (leer lassen für 'Heute')"
       - identifier: title
         type: Text
         label: "Abschluss / Studiengang"
