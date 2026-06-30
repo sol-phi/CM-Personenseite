@@ -5,9 +5,9 @@
         <div class="col-lg-10 col-xl-8">
 
             <div class="bg-primary rounded-4 shadow-lg p-4 p-md-5 text-white">
-                
+
                 <div class="row align-items-center mb-5">
-                    
+
                     <f:if condition="{data.profilbild}">
                         <div class="col-sm-4 col-md-3 text-center mb-4 mb-sm-0">
                             <f:image image="{data.profilbild.0}" alt="Profilbild {data.vorname} {data.nachname}" class="img-fluid rounded-circle shadow border border-3 border-white" style="width: 150px; height: 150px; object-fit: cover;" itemprop="image" />
@@ -21,8 +21,8 @@
                             <f:if condition="{data.strasse} || {data.plz} || {data.ort}">
                                 <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="mb-1">
                                     <i class="bi bi-geo-alt-fill me-2"></i>
-                                    <span itemprop="streetAddress">{data.strasse}</span>, 
-                                    <span itemprop="postalCode">{data.plz}</span> 
+                                    <span itemprop="streetAddress">{data.strasse}</span>,
+                                    <span itemprop="postalCode">{data.plz}</span>
                                     <span itemprop="addressLocality">{data.ort}</span>
                                 </div>
                             </f:if>
@@ -46,9 +46,9 @@
                                     <div class="row">
                                         <div class="col-md-3 text-secondary mb-2 mb-md-0">
                                             <small class="text-uppercase fw-bold">
-                                                {job.startdate} 
-                                                <f:if condition="{job.enddate}">– {job.enddate}</f:if>
-                                                <f:if condition="!{job.enddate}">– Heute</f:if>
+                                                {job.startdate}
+                                                <f:if condition="{job.enddate}">â€“ {job.enddate}</f:if>
+                                                <f:if condition="!{job.enddate}">â€“ Heute</f:if>
                                             </small>
                                         </div>
                                         <div class="col-md-9">
@@ -78,7 +78,7 @@
                                     <div class="row">
                                         <div class="col-md-3 text-secondary mb-2 mb-md-0">
                                             <small class="text-uppercase fw-bold">
-                                                {schule.startdate} <f:if condition="{schule.enddate}">– {schule.enddate}</f:if>
+                                                {schule.startdate} <f:if condition="{schule.enddate}">â€“ {schule.enddate}</f:if>
                                             </small>
                                         </div>
                                         <div class="col-md-9">
