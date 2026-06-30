@@ -1,5 +1,7 @@
 name: team09/alternativer-lebenslauf
 typeName: team09_alternativer_lebenslauf
+title: "Alternatives Lebenslauf-Design"
+description: "Alterntives Design/Test Element"
 group: default
 prefixFields: true
 prefixType: full
