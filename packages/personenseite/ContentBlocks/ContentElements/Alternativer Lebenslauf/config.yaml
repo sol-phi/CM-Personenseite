@@ -4,15 +4,13 @@ group: default
 prefixFields: true
 prefixType: full
 fields:
-  -
-    identifier: header
+  - identifier: header
     useExistingField: true
-    label: "header.label"
+    label: "√úberschrift"
 
-  -
-    identifier: person
+  - identifier: person
     type: Tab
-    label: "Persˆnliche Daten"
+    label: "Pers√∂nliche Daten"
 
   - identifier: vorname
     type: Text
@@ -24,7 +22,6 @@ fields:
     label: "Nachname"
     required: true
 
-  # NEU: Das Feld f¸r das Profilbild
   - identifier: profilbild
     type: File
     label: "Profilbild"
@@ -33,7 +30,7 @@ fields:
 
   - identifier: strasse
     type: Text
-    label: "Straﬂe"
+    label: "Stra√üe"
 
   - identifier: plz
     type: Text
@@ -53,7 +50,7 @@ fields:
 
   - identifier: erfahrungen
     type: Collection
-    label: "Erfahrungseintr‰ge"
+    label: "Erfahrungseintr√§ge"
     labelField: title
     appearance.useSortable: true
     appearance.collapseAll: true
@@ -64,7 +61,7 @@ fields:
         required: true
       - identifier: enddate
         type: Text
-        label: "Endzeitpunkt (leer lassen f¸r 'Heute')"
+        label: "Endzeitpunkt (leer lassen f√ºr 'Heute')"
       - identifier: title
         type: Text
         label: "Position / Jobbezeichnung"
@@ -75,7 +72,7 @@ fields:
         required: true
       - identifier: description
         type: Textarea
-        label: "Beschreibung der T‰tigkeiten"
+        label: "Beschreibung der T√§tigkeiten"
 
   - identifier: bildung_tab
     type: Tab
@@ -83,7 +80,7 @@ fields:
 
   - identifier: bildung
     type: Collection
-    label: "Bildungseintr‰ge"
+    label: "Bildungseintr√§ge"
     labelField: title
     appearance.useSortable: true
     appearance.collapseAll: true
@@ -101,7 +98,7 @@ fields:
         required: true
       - identifier: institution
         type: Text
-        label: "Schule / Universit‰t"
+        label: "Schule / Universit√§t"
         required: true
 
   - identifier: kenntnisse_tab
@@ -117,7 +114,7 @@ fields:
     fields:
       - identifier: skill
         type: Text
-        label: "F‰higkeit (z.B. TYPO3, Englisch)"
+        label: "F√§higkeit (z.B. TYPO3, Englisch)"
         required: true
       - identifier: level
         type: Text
