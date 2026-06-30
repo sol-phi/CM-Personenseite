@@ -1,7 +1,7 @@
 name: team09/alternativer-lebenslauf
 typeName: team09_alternativer_lebenslauf
-title: "Alternatives Lebenslauf-Design"
-description: "Alterntives Design/Test Element"
+title: "Alternativer Lebenslauf"
+description: "Lebenslauf im blauen Design"
 group: default
 prefixFields: true
 prefixType: full
@@ -78,7 +78,7 @@ fields:
 
   - identifier: bildung_tab
     type: Tab
-    label: "Schulbildung / Studium"
+    label: "Bildungsweg"
 
   - identifier: bildung
     type: Collection
@@ -96,12 +96,15 @@ fields:
         label: "Endzeitpunkt"
       - identifier: title
         type: Text
-        label: "Abschluss / Studiengang"
+        label: "Studiengang / Ausbildungsberuf / Schulart"
         required: true
       - identifier: institution
         type: Text
         label: "Schule / Universität"
         required: true
+      - identifier: abschluss
+        type: Text
+        label: "Abschluss (z.B. B.Sc., Abitur, ohne Abschluss)"
 
   - identifier: kenntnisse_tab
     type: Tab
