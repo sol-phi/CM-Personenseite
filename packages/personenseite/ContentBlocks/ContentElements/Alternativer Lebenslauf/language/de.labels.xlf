@@ -5,7 +5,7 @@
     <body>
       <trans-unit id="title">
         <source>CV / Resume</source>
-        <target>Alternativer Lebenslauf</target>
+        <target>Lebenslauf</target>
       </trans-unit>
       <trans-unit id="description">
         <source>A content block to display personal data and career stations.</source>
