@@ -110,17 +110,29 @@ fields:
     type: Tab
     label: "Besondere Kenntnisse"
 
-  - identifier: kenntnisse
+  - identifier: kenntnisse_kategorien
     type: Collection
-    label: "Kenntnisse"
-    labelField: skill
+    label: "Kategorien (z.B. Sprachen, IT-Kenntnisse)"
+    labelField: title
     appearance.useSortable: true
     appearance.collapseAll: true
     fields:
-      - identifier: skill
+      - identifier: title
         type: Text
-        label: "Fähigkeit (z.B. TYPO3, Englisch)"
+        label: "Name der Kategorie"
         required: true
-      - identifier: level
-        type: Text
-        label: "Niveau (z.B. Fortgeschritten, Muttersprache)"
+
+      - identifier: eintraege
+        type: Collection
+        label: "Zugehörige Fähigkeiten"
+        labelField: skill
+        appearance.useSortable: true
+        appearance.collapseAll: true
+        fields:
+          - identifier: skill
+            type: Text
+            label: "Fähigkeit (z.B. TYPO3, Englisch)"
+            required: true
+          - identifier: level
+            type: Text
+            label: "Niveau (z.B. Fortgeschritten, Muttersprache)"
